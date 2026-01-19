@@ -70,3 +70,12 @@ print ('Intercept', model.intercept_)
 print (predictedvalues)
 
 
+# Do RMSE automatically using sklearn
+
+from sklearn.metrics import root_mean_squared_error
+
+print (root_mean_squared_error (y, predictedvalues))
+
+
+
+
