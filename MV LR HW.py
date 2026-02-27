@@ -41,10 +41,12 @@ predictedvalues2 = model.predict (xtest)
 print (root_mean_squared_error (ytrain, predictedvalues))
 print (root_mean_squared_error (ytest, predictedvalues2))
 
-from sklearn.preprocessing import PolynomialFeatures
-from sklearn.metrics import root_mean_squared_error
 
-poly = PolynomialFeatures (degree = 20)
+# Trying if this produces a lower error, so linear is better 
+
+from sklearn.preprocessing import PolynomialFeatures
+
+poly = PolynomialFeatures (degree = 2)
 
 polyfeatures = poly.fit_transform (xtrain)
 polyfeatures2 = poly.fit_transform (xtest)
